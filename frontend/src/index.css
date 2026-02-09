@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+
+@import "tailwindcss";
+
+
+*{
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+p{
+    font-weight: 400;
+}
+
+@theme{
+    --color-primary: #dc8275
+}
