@@ -3,7 +3,7 @@ export const AppContext=createContext();
 
 const AppContextProvider=({children})=>{
     const [loading, setLoading]=useState(false)
-    const [user, setUser]=useState(false)
+    const [user, setUser]=useState(null)
 
 
     const value={loading,setLoading,user,setUser}
