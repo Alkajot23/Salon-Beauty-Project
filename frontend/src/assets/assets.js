@@ -12,6 +12,7 @@ import hair4 from "./hair4.webp"
 import manicure2 from "./manicure2.avif"
 import pricing1 from "./pricing1.avif"
 import pricing2 from "./pricing2.jpg"
+import banner2 from "./banner2.png"
 
 export const assets = {
   //logo,
@@ -28,5 +29,34 @@ export const assets = {
   hair4,
   pricing1,
   pricing2,
+  banner2
 };
 
+export const haircutsData = [
+  {
+    name: "Haircuts",
+
+    price: "125",
+    desc: "Clean & simple 30-40 minutes",
+  },
+  {
+    name: "Skin Fade",
+    price: "145",
+    desc: "Haircut blends to skin",
+  },
+  {
+    name: "Buzz Cut",
+    price: "75",
+    desc: "Clippers only cut all over.",
+  },
+  {
+    name: "Chap Haircut",
+    price: "75",
+    desc: "Junior under 14.",
+  },
+  {
+    name: "Colouring",
+    price: "325",
+    desc: "Junior under 14.",
+  },
+];

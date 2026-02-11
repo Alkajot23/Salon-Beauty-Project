@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useEffect } from "react";
 import { AppContext } from '../context/AppContext'
 import { Link, useLocation } from "react-router-dom";
 import { assets } from "../assets/assets.js";
@@ -12,12 +13,35 @@ const Navbar = () => {
     const location=useLocation()
     const [showMenu, setShowMenu]=useState(false)
     const [mobileOpen, setMobileOpen]=useState(false)
+    const [isHero, setIsHero] = useState(true);
+    const isHome = location.pathname === "/";
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > window.innerHeight * 0.7) {
+      setIsHero(false);
+    } else {
+      setIsHero(true);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
     const isActive=(path)=>location.pathname ===path
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-sm px-4 sm:px-8 md:px-16 lg:px-32 flex items-center justify-between py-4 transition-all duration-300">
-  <div>
+<nav
+  className={`fixed top-0 left-0 w-full z-50 px-4 sm:px-8 md:px-16 lg:px-32 flex items-center justify-between py-4 transition-all duration-500
+    ${isHome && isHero
+
+      ? "bg-gradient-to-b from-black/40 to-transparent" 
+      : "bg-black/50 backdrop-blur-sm"
+    }
+
+  `}
+>  <div>
     <Link to="/">
           <img src={assets.logo} alt="logo" className="w-28" />    
     </Link>

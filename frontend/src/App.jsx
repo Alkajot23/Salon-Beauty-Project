@@ -2,7 +2,6 @@ import {Routes, Route,useLocation} from "react-router-dom"
 import Home from "./pages/Home"
 import Products from "./pages/Products"
 import ProductDetails from "./pages/ProductDetails";
-import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
@@ -26,7 +25,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
