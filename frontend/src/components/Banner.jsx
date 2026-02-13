@@ -28,7 +28,7 @@ const Banner = () => {
     text-white
     bg-transparent
     transition-all duration-500
-    hover:bg-white hover:text-black
+    hover:bg-secondary hover:text-black
   "
 >
   Zarezerwuj <MoveRight />

@@ -48,12 +48,12 @@ useEffect(() => {
   </div>
           <ul className="hidden md:flex items-center space-x-12 uppercase">
           <Link
-            to="/"
+            to="/pricing"
             className={`${
-              isActive("/") ? "text-primary" : "text-white"
+              isActive("/pricing") ? "text-primary" : "text-white"
             } hover:text-primary duration-300 transition-colors`}
           >
-            Home
+            Ceny
           </Link>
           <Link
             to="/services"
@@ -155,13 +155,13 @@ useEffect(() => {
           className="absolute top-full left-0 w-full bg-black flex flex-col items-start px-6 py-4 space-y-4 md:hidden z-40"
         >
           <Link
-            to="/"
+            to="/pricing"
             onClick={() => setMobileOpen(false)}
             className={`${
-              isActive("/") ? "text-primary" : "text-white"
+              isActive("/pricing") ? "text-primary" : "text-white"
             } uppercase hover:text-primary transition`}
           >
-            Home
+            Ceny
           </Link>
 
           <Link

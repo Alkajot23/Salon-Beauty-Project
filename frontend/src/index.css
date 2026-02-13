@@ -13,5 +13,6 @@ p{
 }
 
 @theme{
-    --color-primary: #dc8275
+    --color-primary: #c2886b;
+    --color-secondary: #bc9986;
 }
