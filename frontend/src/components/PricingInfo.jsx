@@ -16,7 +16,7 @@ const PricingInfo = () => {
         <div className="absolute inset-0 bg-black/80"></div>
         {/* Content Layer */}
         <div className="relative z-10 text-white w-full py-4">
-          <h2 className="text-4xl font-bold mb-4">Our Fair Prices</h2>
+          <h2 className="text-4xl font-bold mb-4">Nasze uczciwe ceny</h2>
           <div>
             {haircutsData.map((item, index) => (
               <>
@@ -40,53 +40,13 @@ const PricingInfo = () => {
           </div>
         </div>
       </div>
-      {/* Booking info Section */}
       <div
         className="relative w-full md:w-[40%]  bg-cover bg-center flex items-center justify-center text-center px-6 "
         style={{ backgroundImage: `url(${assets.pricing2})` }}
       >
         {/* Black Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
-        {/* Content Layer */}\
-        <div className="relative z-10 text-white max-w-md py-1">
-          <h1 className="text-4xl font-bold mb-4">
-            Book Your Grooming Appointment
-          </h1>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-md p-4">
-            <h3>Available Appointments on November 7, 2025</h3>
-            {[
-              { time: "10:00 am – 11:00 am", available: false },
-              { time: "11:30 am – 12:30 pm", available: true },
-              { time: "01:00 pm – 02:00 pm", available: false },
-              { time: "02:30 pm – 03:30 pm", available: true },
-            ].map((slot, index) => (
-              <div
-                key={index}
-                className="flex justify-between items-center border-b border-white/20 py-3"
-              >
-                <div>
-                  <p className="font-semibold flex items-center gap-2">
-                    <i className="fa-regular fa-clock"></i> {slot.time}
-                  </p>
-                  <p className="text-sm text-gray-300">9 spaces available</p>
-                </div>
-                {slot.available ? (
-                  <button
-                    onClick={() => navigate("/book-appointment")}
-                    className="px-4 py-2 border border-white hover:bg-primary hover:border-primary transition-all duration-300 rounded-md"
-                  >
-                    Book Appointment
-                  </button>
-                ) : (
-                  <button className="px-4 py-2 bg-red-500 text-white rounded-md cursor-not-allowed">
-                    Unavailable
-                  </button>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );

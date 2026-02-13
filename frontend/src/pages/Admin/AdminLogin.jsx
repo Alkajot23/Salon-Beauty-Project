@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
 
-const Login = () => {
-  const { navigate, loading, setLoading, setUser } = useContext(AppContext);
+const AdminLogin = () => {
+  const { navigate, loading, setLoading, setAdmin } = useContext(AppContext);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -19,9 +18,9 @@ const Login = () => {
     try {
       setLoading(true);
       console.log(formData);
-      toast.success("Zalogowano pomyślnie");
-      setUser(true);
-      navigate("/");
+      toast.success("Zalogowano pomyślnie!");
+      setAdmin(true);
+      navigate("/admin");
     } catch (error) {
       console.log(error);
     } finally {
@@ -32,11 +31,8 @@ const Login = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-8 md:p-12">
         <h1 className="text-3xl md:text-4xl text-center font-bold bg-primary  bg-clip-text text-transparent mb-2">
-          Zaloguj się
+          Admin
         </h1>
-        <p className="text-center text-gray-600 mb-8">
-          Zaloguj się na swoje konto 
-        </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
@@ -61,7 +57,7 @@ const Login = () => {
               htmlFor=""
               className="block text-sm font-semibold text-gray-700 mb-2"
             >
-              Hasło
+            Hasło
             </label>
             <input
               type="password"
@@ -80,18 +76,8 @@ const Login = () => {
             {loading ? "proszę czekaj..." : "Zaloguj się"}
           </button>
         </form>
-
-        <p className="text-center text-gray-600 mt-6">
-          Nie masz konta?
-          <Link
-            to="/signup"
-            className="text-blue-600 font-semibold hover:underline"
-          >
-            Zarejestruj się tutaj
-          </Link>
-        </p>
       </div>
     </div>
   );
 };
-export default Login;
+export default AdminLogin;

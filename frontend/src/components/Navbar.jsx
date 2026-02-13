@@ -175,10 +175,10 @@ useEffect(() => {
           </Link>
 
           <Link
-            to="/products"
+            to="/"
             onClick={() => setMobileOpen(false)}
             className={`${
-              isActive("/products") ? "text-primary" : "text-white"
+              isActive("/") ? "text-primary" : "text-white"
             } uppercase hover:text-primary transition`}
           >
             Salony
