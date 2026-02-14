@@ -106,8 +106,8 @@ return (
       <div className="w-full p-10 md:w-2/3 flex flex-col gap-10">
 
         {/* TYTUŁ */}
-        <h1 className="text-primary font-bold text-5xl text-left">
-          Ceny Usług
+        <h1 className="text-primary font-bold text-5xl text-left bg-gradient-to-r from-[#bfbfbf] to-white bg-clip-text text-transparent dark:from-primary dark:to-white">
+          CENY USŁUG
         </h1>
 
         {/* DROPDOWNY */}

@@ -23,13 +23,13 @@ const AdminLayout = () => {
     },
     {
       path: "/admin/add-service",
-      name: "Add Service",
+      name: "Dodaj usługę",
       icon: Package,
     },
 
     {
       path: "/admin/services",
-      name: "All Services",
+      name: "Wszystkie usługi",
       icon: Grid3X3,
     },
 
@@ -135,7 +135,7 @@ const AdminLayout = () => {
               <div className="text-sm text-gray-500">
                 <p
                   onClick={logout}
-                  className="cursor-pointer hover:underline text-red-500 text-lg font-semibold"
+                  className="cursor-pointer hover:underline text-primary text-lg font-semibold"
                 >
                   Wyloguj się
                 </p>

@@ -51,19 +51,44 @@ const servicesData = [
     price: "160",
   },
 ];
-  return (
-    <div className="py-20 max-w-7xl mx-auto">
+return (
+  <div className="w-full bg-[#1a1a1a]">  
+    <div className="py-24 max-w-7xl mx-auto px-6">
 
-      {/* --- KARTY USŁUG --- */}
-      <div className="py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-5">
-          {servicesData.map((service, index) => (
-            <ServiceCard key={index} service={service} />
-          ))}
-        </div>
-      </div>
+    {/* --- NAGŁÓWEK SEKCJI --- */}
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+  className="
+    text-center text-4xl font-light tracking-widest mb-16
+    bg-gradient-to-r from-[#bfbfbf] to-white 
+    bg-clip-text text-transparent dark:from-primary dark:to-white
+  "
+>
+  NASZE USŁUGI
+
+    </motion.h2>
+
+    {/* --- KARTY USŁUG --- */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {servicesData.map((service, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: index * 0.1 }}
+        >
+          <ServiceCard service={service} />
+        </motion.div>
+      ))}
     </div>
-  );
+    </div>
+  </div>
+
+);
+
+ 
 };
 
 export default Services;
